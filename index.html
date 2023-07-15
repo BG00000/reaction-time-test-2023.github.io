@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INSTRUCTIONS & PRACTICE</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fstatic.vecteezy.com%2Fsystem%2Fresources%2Fpreviews%2F000%2F276%2F387%2Foriginal%2Fvector-colorful-modern-abstract-layout-and-background.jpg&f=1&nofb=1&ipt=4707b28b1e63bcb6df33fe19d0ab8d33b094ecd1d549991c729a0dee9a3ad474&ipo=images" type="image/x-icon">
+
+</head>
+<body>
+    <h1 class="header" id="header"></h1>
+    <div id="practice-message-box" class="practice-message-box">
+        <div class="practice-message" id="practice-message">
+            [PRACTICE TEST] <br><br>
+            Press the space-bar when the background turns green <br><br>
+            Remember to react as quickly as possible!
+        </div>
+    </div>
+    
+    <div class="instructions" id="instructions">
+        <div class="header-message">
+            EFFECT OF AUDIO STIMULUS ON REACTION TIME
+        </div>
+        <div class="sub">
+        <span class="please-read">Please read all the instructions carefully (scroll)</span>
+
+        Please set aside ~5 minutes to participate in this investigation <br><br>
+
+        This test is to be completed on a computer or device with a physical space-bar <br><br>
+
+        You will have the option to start a practice test after filling out and submitting your details below <br><br>
+
+        When each test begins, this white instruction screen will disappear and you will be presented with a pure red screen <br><br>
+
+        When the screen turns green you must react as quickly as possible by pressing the space-bar<br><br>
+
+        It is recommended you hover your finger just above the space-bar to achieve the best possible results <br><br>
+
+        You will be given one practice run to familiarise yourself with the test <br><br>
+
+        After this, you will complete a CONTROL trial, an AUDIO trial, and an AUDIO & QUESTIONS trial  <br><br>
+
+        You will not be shown any of your times until each section of the test is complete <br><br>
+
+        Do not discuss your thoughts on the test with anyone who may complete the test in the future <br><br>
+
+
+        <strong>NOTE: I built this website with the assumption that everyone would be honest</strong>
+        <strong>please don't try to "cheat" the tests, it will only amount in your results being excluded from our investigation</strong>
+        <strong>please complete the test as per the instructions</strong>
+        </div>
+        <div class="u-input-box">
+            <form id="Q3">
+                <div class="u-input-sub2">
+                    <input type="radio" id="male" name="sex" value="male" class="male">
+                    <label class="male-t" for="male">MALE</label><br>
+                    <input type="radio" id="female" name="sex" value="female" class="female">
+                    <label for="female">FEMALE</label><br>
+                </div>
+            </form>
+            <form id="Q1-Q2">
+                <div class="u-input-sub1">
+                    <input type="text" id="birth-date" class="u-input" placeholder="Birth Date (DD/MM/YYYY)">
+                    <input type="text"  id="occupation" class="u-input" placeholder="Occupation/Education">
+                    
+                    <button type="submit" id="submit-btn" class="submit-btn">
+                        SUBMIT
+                    </button>
+                </div>
+            </form>
+        </div>
+        
+
+        <button class="start-btn" id="start-btn">
+            PRESS HERE TO START THE PRACTICE TEST
+        </button>
+    
+    
+    </div>
+
+    <div id="timer"></div>
+    <div class="result" id="result"></div>
+    
+    <script>
+        document.getElementById('Q1-Q2').addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevent form submission and page reload
+
+        // Get input values
+        var birthDate = document.getElementById('birth-date').value;
+        var occupation = document.getElementById('occupation').value;
+
+        // Get selected gender
+        var sexElement = document.querySelector('input[name="sex"]:checked');
+        var sex = sexElement ? sexElement.value : '';
+
+        // Store the data in local storage or use as desired
+        
+        localStorage.setItem('sex', sex);
+        localStorage.setItem('occupation', occupation);
+        localStorage.setItem('birthDate', birthDate);
+
+        // Print the values
+        console.log('Stored Sex:', localStorage.getItem('sex'));
+        console.log('Stored Birth Date:', localStorage.getItem('birthDate'));
+        console.log('Stored Occupation:', localStorage.getItem('occupation'));
+
+  
+        });
+
+      </script>
+      <script src="scriptPRACTICE.js"></script>
+    
+</body>
+</html>
