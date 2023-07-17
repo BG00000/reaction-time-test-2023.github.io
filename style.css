@@ -314,11 +314,12 @@ body {
   color: white;
   cursor: pointer;
   border-radius: 5px;
-  min-height: 30px;
-  width: 355px;
+  min-height: 200px;
+  width: 1050px;
   margin-left: 100px;
   margin-top: 10px;
   display: none;
+  font-size: 50px;
 }
 .submit-btn-2:hover {
   opacity: 0.7;
