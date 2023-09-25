@@ -21,7 +21,7 @@ document.getElementById("publish").addEventListener("click", function(event) {
     var emailData = {
         Host: "smtp.elasticemail.com",
         Username: "reactiontimetest2023@gmail.com",
-        Password: "9E1C08D435D0DD76E53167CE4C32741D9027",
+        Password: "_______________________________",
         To: "reactiontimetest2023@gmail.com",
         From: "reactiontimetest2023@gmail.com",
         Subject: "REACTION TIME TEST RESULTS FINAL",
